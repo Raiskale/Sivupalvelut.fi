@@ -90,31 +90,43 @@ section {
   }
 
 
-@media (max-width: 1028px) {
+  @media (max-width: 1028px) {
     .menu-icon {
         display: block;
         margin-right: 2vw;
         font-size: 28px;
         cursor: pointer;
-      }
+    }
 
-      .navbar {
+    .navbar {
         flex-direction: column;
-        background-color: var(--c2);
+        background-color: var(--color-surface);
         align-items: start;
         position: absolute;
         top: 100px;
         left: 0;
         width: 100%;
         z-index: 1;
-        transform: scale(1, 0);
-        transform-origin: top;
-        transition: transform 0.5s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .7s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      }
+    }
 
-      .navbar a {
+    #menu-toggle:checked ~ .navbar {
+        max-height: 400px; /* Adjust based on content height */
+    }
+
+    .navbar a {
         margin-left: 5vw;
-        margin-bottom: 2rem;
-      }
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: var(--color-text-primary);
+        transition: color 1s ease-in-out;
+    }
+
+    .navbar a:hover {
+        color: var(--color-accent);
+        transition: color .2s ease-in-out;
+    }
 }
