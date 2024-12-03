@@ -9,14 +9,14 @@
 }
 
 section {
-    min-height: 100vh;
+    height: 100vh;
 }
 :root {
     --color-background: #f9f9f9; /* Light grey for backgrounds */
     --color-surface: #ffffff; /* Pure white for cards or containers */
     --color-text-primary: #000; /* Dark grey for main text */
     --color-text-secondary: #555555; /* Medium grey for secondary text */
-    --color-accent: #0015ff; /* Muted blue for links and buttons */
+    --color-accent: #003cff; /* Muted blue for links and buttons */
     --color-border: #e0e0e0; /* Soft grey for dividers */
     --color-hover: #3a78c2; /* Slightly darker blue for hover states */
   }
@@ -24,22 +24,36 @@ section {
 
   .header {
     position: sticky;
-    box-shadow: 1px 1px var(--color-border);
+    box-shadow: 0px 2px 5px var(--color-border);
     background: var(--color-surface);
-    padding: .75rem;
+    padding: .85rem;
     display: flex;
     justify-content: space-between;
   }
 
   .logo {
     margin-left: 5vw;
-    font-weight: 600;
-    font-size: 2rem;
+    font-size: 1rem;
     max-width: 15rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo h2 {
+    font-weight: 500;
+    background: transparent;
+    background: linear-gradient(to right, #000000 22%, #003cff 5vw);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .logo img {
+    width: 12.5%;
+    margin-right: .25rem;
   }
 
   .navbar {
-    margin-right: 5vw;
+    margin-right: 3vw;
     display: flex;
     align-items: center;
   }
@@ -47,7 +61,7 @@ section {
   .navbar a {
     margin-right: 3rem;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-text-primary);
   }
 
@@ -58,7 +72,49 @@ section {
   #nappi {
     border: 1px solid var(--color-accent);
     color: var(--color-background);
-    padding: .75rem 1.25rem;
+    padding: .60rem 1.25rem;
     border-radius: 7px;
     background: var(--color-accent);
   }
+
+  .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ .navbar {
+    transform: scale(1, 1);
+  }
+
+
+@media (max-width: 1028px) {
+    .menu-icon {
+        display: block;
+        margin-right: 2vw;
+        font-size: 28px;
+        cursor: pointer;
+      }
+
+      .navbar {
+        flex-direction: column;
+        background-color: var(--c2);
+        align-items: start;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+
+      .navbar a {
+        margin-left: 5vw;
+        margin-bottom: 2rem;
+      }
+}
