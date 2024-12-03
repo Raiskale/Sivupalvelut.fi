@@ -8,6 +8,10 @@
     
 }
 
+
+html {
+    font-size: 62,5%;
+}
 section {
     height: 100vh;
 }
@@ -97,6 +101,7 @@ section {
     transform: translateY(22.5vh);
     z-index: 1;
     color: var(--color-background);
+    margin-bottom: 5rem;
   }
 
   .teksti h2 {
@@ -120,10 +125,57 @@ section {
   }
 
 
+
+
   .second {
-    height: 40.5vh;
+    height: 40vh;
+    display: flex;
+    
   }
   
+  .rotta {
+    margin-left: 17.5vw;
+    margin-top: 10vh;
+    font-size: .75rem;
+    color: var(--color-accent);
+    font-weight: 400;
+    border: 1px solid var(--color-accent);
+    max-height: 1rem;
+    padding: .50rem;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    transform: rotate(-3deg);
+  }
+
+  .tieto {
+    margin-left: 15vw;
+    font-size: 1.5rem;
+    margin-top: 7.5vh;
+    max-width: 50rem;
+    
+  }
+
+  .tieto h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .tieto h2 img{
+    width: 5%;
+    margin-left: .5rem;
+  }
+
+  .tieto a {
+    border: 1px solid var(--color-accent);
+    color: var(--color-background);
+    padding: .40rem 1.2rem;
+    border-radius: 7px;
+    background: var(--color-accent);
+    text-decoration: none;
+    
+  }
 
   .menu-icon {
     display: none;
@@ -162,7 +214,7 @@ section {
         background-color: var(--color-surface);
         align-items: start;
         position: absolute;
-        top: 100px;
+        top: 59px;
         left: 0;
         width: 100%;
         z-index: 1;
@@ -190,6 +242,15 @@ section {
     }
 
     .teksti h2 {
-        padding-top: 10rem;
+        padding-top: 20rem;
+       
+    }
+    .teksti {
+        margin-left: 5vw;
+        max-width: 25rem;
+    }
+
+    html {
+        font-size: 80%;
     }
 }
