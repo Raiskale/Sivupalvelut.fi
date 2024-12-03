@@ -22,9 +22,22 @@ section {
   }
 
 
+  .first {
+    background-image: url(Public/Images/Office\,\ computer\ with\ green\ screen_10.png);
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  
+
   .header {
-    position: sticky;
-    box-shadow: 0px 2px 5px var(--color-border);
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0; /* Aligns it to the top of the viewport */
+    left: 0;
+    width: 100%; /* Ensures the header spans the full width */
+    z-index: 1000;
     background: var(--color-surface);
     padding: .85rem;
     display: flex;
@@ -77,6 +90,41 @@ section {
     background: var(--color-accent);
   }
 
+  .teksti {
+    width: 100%;
+    max-width: 35rem;
+    margin-left: 17.5vw;
+    transform: translateY(22.5vh);
+    z-index: 1;
+    color: var(--color-background);
+  }
+
+  .teksti h2 {
+    padding-top: 37.5rem;
+    font-size: 3.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .teksti a {
+    border: 1px solid var(--color-accent);
+    color: var(--color-background);
+    padding: .60rem 1.5rem;
+    border-radius: 7px;
+    background: var(--color-accent);
+    text-decoration: none;
+    transition: padding .3s ease;
+  }
+
+  .teksti a:hover {
+    padding: .7rem 1.9rem; /* Same padding on hover to prevent movement */
+  }
+
+
+  .second {
+    height: 40.5vh;
+  }
+  
+
   .menu-icon {
     display: none;
   }
@@ -89,6 +137,17 @@ section {
     transform: scale(1, 1);
   }
 
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .2s ease, transform .5s ease;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
 
   @media (max-width: 1028px) {
     .menu-icon {
@@ -128,5 +187,9 @@ section {
     .navbar a:hover {
         color: var(--color-accent);
         transition: color .2s ease-in-out;
+    }
+
+    .teksti h2 {
+        padding-top: 10rem;
     }
 }
