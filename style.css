@@ -101,10 +101,10 @@ section {
 	font-size: 2rem;
 	margin-left: 15vw;
 	position: relative;
-	transform: translateY(55.5vh);
+	
 	height: 27.5vh;
 	z-index: 1;
-	margin-top: 10vh;
+	margin-top: 60vh;
 	color: var(--color-background);
 	margin-bottom: 2vh;
 }
@@ -249,7 +249,7 @@ section {
 		transition: color .2s ease-in-out;
 	}
 	.teksti {
-		transform: translateY(60.5vh);
+
 		margin-left: 5vw;
 		max-width: 35rem;
 	}
@@ -268,9 +268,7 @@ section {
 	.contti2 h2 img {
 		width: 9.5%;
 	}
-	.teksti {
-		transform: translateY(30vh);
-	}
+
 	.teksti h1 {
 		font-size: 3.25rem;
 		margin-bottom: 1.5rem;
