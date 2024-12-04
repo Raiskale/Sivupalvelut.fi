@@ -227,6 +227,9 @@ position: relative;
 	top: 2rem;
 }
 
+.kontti .folioista {
+	height: 40vh;
+}
 
 .kontti .folioista h2{
 	margin-top: 2vh;
@@ -285,6 +288,77 @@ position: relative;
 	transform: scale(1.05);
 }
 
+
+.fourth {
+	height: 75vh;
+}
+
+.kontattu {
+	margin: 1rem;
+	margin-left: 5rem;
+	flex-direction: column;
+	display: flex;
+	width: 80vw;
+	position: relative;
+	}
+
+.kontattu .boxi {
+	display: flex;
+	align-self: first baseline;
+	margin-left: 15vw;
+	margin-top: 10vh;
+	font-size: .75rem;
+	border: 1px solid var(--color-accent);
+	padding: .40rem .60rem;
+	border-radius: 7px;
+	color: var(--color-accent);
+	transform: rotate(-3deg);
+	top: 2rem;
+}
+
+
+.yritykselle {
+	height: 40vh;
+}
+.yritykselle h2{
+	display: flex;
+	align-self: flex-end;
+	margin-top: 2vh;
+	margin-left: 35vw;
+	max-width: 30vw;
+	font-size: 3rem;
+	font-weight: 600;
+	flex-direction: column;
+}
+
+.yritykselle h2 span {
+	color: var(--color-accent);
+}
+
+.yritykselle p {
+	display: flex;
+	margin-left: 35vw;
+	margin-top: 3vh;
+	font-size: 1.15rem;
+	margin-bottom: 3vh;
+	max-width: 30vw;
+}
+
+.yritykselle a {
+	margin-top: 2vh;
+	border: 1px solid var(--color-accent);
+	width: 6rem;
+	padding: .55rem 1rem;
+	color: var(--color-background);
+	background: var(--color-accent);
+	text-decoration: none;
+	border-radius: 7px;
+	transition: transform .1s ease-in-out;
+	margin-left: 35vw;
+	margin-right: 1rem;
+}
+
+/* Hamburger */
 .menu-icon {
 	display: none;
 }
@@ -356,6 +430,24 @@ position: relative;
 		margin-bottom: 2vh;
 	}
 
+	.yritykselle h2 {
+		margin-left: 0;
+		max-width: 50vw;
+		font-size: 3rem;
+	}
+
+	.kontattu .boxi {
+		margin-left: 0;
+	}
+
+	.yritykselle p {
+		margin-left: 0;
+		max-width: 50vw;
+	}
+	.yritykselle a {
+		margin-left: 0;
+	}
+
 	.contti .boxi {
 		margin-left: 0;
 		margin-bottom: 1vh;
@@ -370,6 +462,7 @@ position: relative;
 		max-width: 50vw;
 		font-size: 3rem;
 	}
+
 
 	.kontti .folioista p {
 		margin-left: 0;
@@ -387,9 +480,18 @@ position: relative;
 		font-size: 3rem;
 	}
 
+	.yritykselle h2 {
+		max-width: 100vw;
+		font-size: 3rem;
+	}
+
 	.teksti h1 {
 		font-size: 3.25rem;
 		margin-bottom: 1.5rem;
+	}
+
+	.yritykselle p {
+		max-width: 100vw;
 	}
 
 
