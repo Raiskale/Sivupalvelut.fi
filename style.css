@@ -269,7 +269,7 @@ section {
 		width: 9.5%;
 	}
 	.teksti {
-		transform: translateY(55.5vh);
+		transform: translateY(30vh);
 	}
 	.teksti h1 {
 		font-size: 3.25rem;
