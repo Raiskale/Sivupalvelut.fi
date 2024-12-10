@@ -3,7 +3,7 @@
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
-	
+
 }
 html {
 	font-size: 62,5%;
@@ -356,6 +356,108 @@ position: relative;
 	transition: transform .1s ease-in-out;
 	margin-left: 35vw;
 	margin-right: 1rem;
+}
+
+
+
+.footer {
+	display: flex;
+	bottom: 0;
+	height: 32.5vh	;
+	width: 100%	;
+	background: #1c1b18;		
+	justify-content: center	;	
+	position: relative;
+
+}
+
+.footer .stuff {
+	display: flex;
+	flex-direction: row;
+	width: 50vw;
+	margin-top: 3.5vh	;
+	max-width: 50vw	;	
+}	
+.stuff .rivi {
+ 	max-width: 12.5rem;
+	display: flex;
+	flex-direction: column;
+	max-height: 10rem;
+}
+
+.stuff .rivi1 {
+	max-width: 12.5rem;	
+	display: flex;
+	flex-direction: column;
+	margin-left: 4.5vw;
+	max-height: 10rem;
+}
+.stuff .rivi h2 {
+	color: var(--color-background);
+	font-size: 1.25rem;
+	margin-bottom: 2vh;
+}
+
+.stuff .rivi a {
+	color: var(--color-background);
+	text-decoration: none;	
+	margin-bottom: 1.25vh;
+	font-size: .85rem;
+}
+
+
+.stuff .rivi1 h2 {
+	color: var(--color-background);
+	font-size: 1.25rem;
+	margin-bottom: 2vh;
+}
+
+.stuff .rivi1 a {
+	color: var(--color-background);
+	text-decoration: none;	
+	margin-bottom: 1.25vh;
+	font-size: .85rem;
+}
+
+.bottomi {
+	position: absolute;
+	bottom: 0;
+	width: 50vw;
+	margin-bottom: 2vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo1 {
+	
+	font-size: 1.75		rem;
+	max-width: 10rem;
+	display: flex;
+	align-items: center;
+
+	
+}
+.logo1 h2 {
+	font-weight: 500;
+	color: var(--color-background);
+}
+
+.logo1 img {
+	width: 25.5%;
+	margin-right: .25rem;
+}
+
+
+.bottomi .linkit {
+	font-size: 1.5rem;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
+
+.bottomi .linkit a {
+	color: var(--color-background);
 }
 
 /* Hamburger */
