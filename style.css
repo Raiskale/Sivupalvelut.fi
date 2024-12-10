@@ -470,6 +470,14 @@ position: relative;
 	.kontti .folioista a {
 		margin-left: 0;
 	}
+
+	.second {
+		height: 45vh;
+	}
+
+	.third {
+		height: 80vh;
+	}
 }
 @media (max-width: 768px) {
 	.contti2 h2 img {
