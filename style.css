@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 
-}
+}	
 html {
 	font-size: 62,5%;
 }
@@ -249,7 +249,10 @@ position: relative;
 	margin-top: 3vh;
 	font-size: 1.15rem;
 	margin-bottom: 3vh;
+	max-width: 50rem	;
 }
+
+
 
 .folioista a {
 	margin-top: 2vh;
@@ -266,6 +269,17 @@ position: relative;
 .folioista a:hover {
 	transform: scale(1.05);
 }
+
+.folioista img {
+	width: 22.5%;
+	position: absolute;
+	right: 0;
+	margin-right: 10vw;
+	top: 0;
+	margin-top: 12.5vh;
+	transform: rotate(3deg);
+}
+
 
 #esimerkki {
 	margin-left: -1vw;
@@ -499,6 +513,10 @@ position: relative;
 		overflow: hidden;
 		transition: max-height .7s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	}
+
+	.folioista img {
+		display: none	;
 	}
 	#menu-toggle:checked ~ .navbar {
 		max-height: 400px;
