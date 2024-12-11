@@ -270,6 +270,8 @@ position: relative;
 	transform: scale(1.05);
 }
 
+	
+
 .folioista img {
 	width: 22.5%;
 	position: absolute;
@@ -493,9 +495,16 @@ ul{
 #menu-toggle:checked ~ .navbar {
 	transform: scale(1, 1);
 }
+
+
+
 @media (max-width: 1280px) {
 	html {
 		font-size: 77.5%;
+	}
+
+	.kontti .folioista {
+		height: 30vh;
 	}
 }
 .animate-on-scroll.in-view {
