@@ -3,6 +3,7 @@
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
+	
 
 }	
 html {
@@ -385,30 +386,89 @@ position: relative;
 
 }
 
+.botti {
+	position: absolute;
+    bottom: 0;
+    width: 47.5vw;
+    margin-bottom: 3.5vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+.linkit {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.linkit a {
+	color: var(--color-background);
+	font-size: 1.5rem;
+	transition: .2s;
+}
+
+.linkit a:hover {
+	color: var(--color-accent);
+}
+
+.pohjus {
+	
+	font-size: 1rem;
+	max-width: 20rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+.pohjus h2 {
+	font-weight: 500;
+	color: var(--color-background);
+	font-size: 2rem;		
+}
+.pohjus img {
+	width: 12.5%;
+	margin-right: .25rem;
+}
+
+.pohjus p {
+	color: var(--color-background)	;
+	margin-top: .5vh;
+	font-size: .90rem;
+	
+}
+
 .footer .stuff {
 	display: flex;
 	flex-direction: row;
-	width: 50vw;
+	width: 47.5vw;
 	margin-top: 3.5vh	;
 	max-width: 50vw	;	
 }	
 .stuff .rivi {
- 	max-width: 12.5rem;
+ 	max-width: 17.5rem;
 	display: flex;
 	flex-direction: column;
 	max-height: 10rem;
 }
 
+.stuff .rivi1 a:hover,
+.stuff .rivi a:hover {
+	color: var(--color-accent);
+}
+
+
+
 .stuff .rivi1 {
-	max-width: 12.5rem;	
+	max-width: 17.5rem;	
 	display: flex;
 	flex-direction: column;
-	margin-left: 4.5vw;
+	margin-left: 6.5vw;
 	max-height: 10rem;
 }
 .stuff .rivi h2 {
 	color: var(--color-background);
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	margin-bottom: 2vh;
 }
 
@@ -416,13 +476,14 @@ position: relative;
 	color: var(--color-background);
 	text-decoration: none;	
 	margin-bottom: 1.25vh;
-	font-size: .85rem;
+	font-size: 1rem;
+	transition: .2s	;
 }
 
 
 .stuff .rivi1 h2 {
 	color: var(--color-background);
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	margin-bottom: 2vh;
 }
 
@@ -430,49 +491,15 @@ position: relative;
 	color: var(--color-background);
 	text-decoration: none;	
 	margin-bottom: 1.25vh;
-	font-size: .85rem;
-}
-
-.bottomi {
-	position: absolute;
-	bottom: 0;
-	width: 50vw;
-	margin-bottom: 2vh;
-	display: flex;
-	justify-content: space-between;
-}
-
-.logo1 {
-	
-	font-size: 1.75		rem;
-	max-width: 10rem;
-	display: flex;
-	align-items: center;
-
-	
-}
-.logo1 h2 {
-	font-weight: 500;
-	color: var(--color-background);
-}
-
-.logo1 img {
-	width: 25.5%;
-	margin-right: .25rem;
+	font-size: 1rem;
+	transition: .2s	;
 }
 
 
-.bottomi .linkit {
-	font-size: 1.5rem;
-	align-items: center;
-	display: flex;
-	flex-direction: row;
-	gap: 2rem;
-}
 
-.bottomi .linkit a {
-	color: var(--color-background);
-}
+
+
+
 
 /* Hamburger */
 .menu-icon {
@@ -622,5 +649,57 @@ position: relative;
 		max-width: 100vw;
 	}
 
+	.footer .stuff {
+		width: 100vw;
+		
+		
+	}
+	.footer {
+		height: 25vh;
+		justify-content: start;
+	}
+
+	.stuff .rivi1 h2, 
+	.stuff .rivi h2 {
+		font-size: 1rem;
+		margin-left: 1.35rem;
+	}
+
+	.stuff .rivi1 a,
+	.stuff .rivi a {
+		margin-left: 1.35rem;
+		font-size: .95rem;
+		margin-bottom: .2vh;
+	}
+
+
+
+	.stuff .rivi,
+	.stuff .rivi1 {
+		max-height: 7.5rem;
+	}
+	
+	.stuff .rivi1 {
+		margin-left: 2vw;
+	}
+
+	.botti {
+		margin-bottom: 0;
+		width: 85vw;
+	}
+
+	.pohjus {
+		max-width: 20rem;
+	}
+
+	.pohjus h2 {
+		font-size: 1rem;
+	}
+
+	.pohjus p {
+		font-size: .75rem;
+		margin-bottom: 1vh;
+		margin-left: 1vw;
+	}
 
 }
