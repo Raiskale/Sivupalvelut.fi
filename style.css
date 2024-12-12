@@ -32,7 +32,7 @@ section {
 	--color-background2: #F6F5EF;
 }
 .first {
-	background-image: url(Public/Images/Office\,\ computer\ with\ green\ screen_10.png);
+	background-image: url(Public/Images/tianxiang-ji-Nc2XBdlurY0-unsplash.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -553,7 +553,7 @@ ul{
 		transition: color .2s ease-in-out;
 	}
 	.teksti {
-
+		
 		margin-left: 5vw;
 		max-width: 35rem;
 	}
@@ -641,6 +641,9 @@ ul{
 		max-width: 100vw;
 	}
 
+	.teksti {
+		margin-top: 50vh
+	}
 
 
 }
