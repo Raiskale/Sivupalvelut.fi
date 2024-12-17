@@ -84,7 +84,96 @@ section {
 	text-decoration: none;
 	font-size: 1rem;
 	color: var(--color-text-primary);
+	padding: .10rem;
 }
+
+.dropdown {
+    position: relative;
+	display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex; 
+    align-items: center;
+}
+
+ .dropdown-menu {
+    display: flex;
+    position: absolute;
+    top: 100%; /* Näytetään suoraan linkin alapuolella */
+    left: 0;
+    background-color: var(--color-background);
+	border-radius: 10px;
+	border: 2px solid var(--color-accent);
+    z-index: 100;
+	width: 12.5vw;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.5rem 1rem;
+    transform: translateY(-50px); /* Siirtää ylös 10 pikseliä */
+    opacity: 0; /* Piilotettu */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Siirtymä */
+	pointer-events: none;
+}
+
+
+.dropdown-menu a {
+    display: block;
+    color: var(--color-text-primary);
+    padding: 10px 3px;
+    text-decoration: none;
+	font-weight: 500;
+	font-size: 1.10rem;
+	width: 80%;
+	margin-left: .5vw;
+	padding: .5rem;
+}
+
+.dropdown-menu a img {
+	width: 15.5%;
+	margin-right: 2px;
+	align-self: center;
+	vertical-align:	middle;
+}
+
+.dropdown-menu a #toka {
+	width: 10%;
+	margin-left: .35vw;
+	margin-right: 5px;
+	align-self: center;
+	vertical-align:	middle;
+}
+
+.dropdown-menu a #kolmas {
+	width: 9.5%;
+	margin-left: .35vw;
+	margin-right: 5px;
+	align-self: center;
+	vertical-align:	middle;
+}
+
+.dropdown-menu a:hover {
+    color: var(--color-accent);
+}
+
+
+/* Hover-toiminta vain dropdownille */
+.dropdown:hover .dropdown-menu {
+    display: flex; /* Näytä elementti */
+    transform: translateY(0); /* Palaa alkuperäiseen paikkaansa */
+    opacity: 1; /* Tee näkyväksi */
+}
+
+.dropdown-toggle i {
+    transition: transform 0.3s ease; /* Sulava siirtymä */
+}
+
+.dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
 .navbar a i {
 	margin-left: .25rem;
 }
@@ -236,7 +325,7 @@ position: relative;
 	margin-top: 2vh;
 	margin-left: 15vw;
 	max-width: 30vw;
-	font-size: 3rem;
+	font-size: 2.75rem;
 	font-weight: 600;
 	flex-direction: column-reverse;
 }
