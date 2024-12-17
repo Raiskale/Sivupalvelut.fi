@@ -63,16 +63,19 @@ section {
 	display: flex;
 	align-items: center;
 }
-.logo h2 {
+.logo a {
 	font-weight: 500;
 	background: transparent;
 	background: linear-gradient(to right, #000000 22%, #003cff 5vw);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	text-decoration: none;
+	font-size: 1.5rem;
 }
 .logo img {
 	width: 12.5%;
 	margin-right: .25rem;
+	vertical-align: bottom;
 }
 .navbar {
 	margin-right: 3vw;
