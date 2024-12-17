@@ -111,7 +111,7 @@ section {
 	flex-direction: column;
 	align-items: center;
 	padding: 1.5rem 1rem;
-    transform: translateY(-50px); /* Siirtää ylös 10 pikseliä */
+    transform: translateY(-10px); /* Siirtää ylös 10 pikseliä */
     opacity: 0; /* Piilotettu */
     transition: transform 0.3s ease, opacity 0.3s ease; /* Siirtymä */
 	pointer-events: none;
@@ -161,8 +161,9 @@ section {
 /* Hover-toiminta vain dropdownille */
 .dropdown:hover .dropdown-menu {
     display: flex; /* Näytä elementti */
-    transform: translateY(0); /* Palaa alkuperäiseen paikkaansa */
+    transform: translateY(0px); /* Palaa alkuperäiseen paikkaansa */
     opacity: 1; /* Tee näkyväksi */
+	pointer-events: all;
 }
 
 .dropdown-toggle i {
@@ -613,7 +614,8 @@ ul{
 		background-color: var(--color-surface);
 		align-items: start;
 		position: absolute;
-		top: 59px;
+		height: auto;
+		top: 50px;
 		left: 0;
 		width: 100%;
 		z-index: 1;
@@ -623,16 +625,20 @@ ul{
 		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 	}
 
+
+
 	.folioista img {
 		display: none	;
 	}
 	#menu-toggle:checked ~ .navbar {
-		max-height: 400px;
-		/* Adjust based on content height */
+		max-height: 100vh;
+		
+	  
 	}
 	.navbar a {
 		margin-left: 5vw;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2rem;
+		margin-top: 2vh;
 		font-size: 1.1rem;
 		color: var(--color-text-primary);
 		transition: color 1s ease-in-out;
@@ -641,6 +647,65 @@ ul{
 		color: var(--color-accent);
 		transition: color .2s ease-in-out;
 	}
+
+	.dropdown-menu {
+		border: none;
+		left: 0;
+		background: var(--color-background);
+		z-index: 100;
+		width: 80vw;
+		flex-direction: column;
+		display: none;
+		justify-content: flex-start;
+		padding:0%;
+		position: static;
+
+	}
+	
+	
+	.dropdown-menu a {
+		align-items: start;
+		color: var(--color-text-primary);
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.10rem;
+		width: 50%;
+		margin-top: -2vh;
+		margin-left: 5vw;
+		padding: 0;
+		align-self: flex-start;
+	}
+	
+	.dropdown-menu a img {
+		width: 12.5%;
+		margin-right: 2px;
+		align-self: center;
+		vertical-align:	middle;
+	}
+	
+	.dropdown-menu a #toka {
+		width: 10%;
+		margin-left: .35vw;
+		margin-right: 5px;
+		align-self: center;
+		vertical-align:	middle;
+	}
+	
+	.dropdown-menu a #kolmas {
+		width: 9.5%;
+		margin-left: .35vw;
+		margin-right: 5px;
+		align-self: center;
+		vertical-align:	middle;
+	}
+
+	.dropdown:hover .dropdown-menu {
+		display: flex; /* Näytä elementti */
+		transform: translateY(0px); /* Palaa alkuperäiseen paikkaansa */
+		opacity: 1; /* Tee näkyväksi */
+		pointer-events: all;
+	}
+
 	.teksti {
 		
 		margin-left: 5vw;
@@ -737,6 +802,8 @@ ul{
 	.teksti {
 		margin-top: 50vh
 	}
+
+	
 
 
 }
