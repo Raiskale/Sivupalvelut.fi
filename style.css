@@ -3,7 +3,7 @@
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
-	
+	outline: 1px solid red;
 }	
 html {
 	font-size: 62,5%;
@@ -323,7 +323,10 @@ z-index: 5;
 }
 
 .kontti .folioista {
-	height: 40vh;
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 .kontti .folioista h2{
@@ -347,39 +350,47 @@ z-index: 5;
 	margin-top: 3vh;
 	font-size: 1.15rem;
 	margin-bottom: 3vh;
-	max-width: 50rem;
+	max-width: 30rem;
 }
 
 
 
 .folioista a {
 	z-index: 5;
-	margin-top: 2vh;
+	margin-top: 1vh;
 	border: 1px solid var(--color-accent);
-	width: 6rem;
-	padding: .8rem 2rem;
+	width: 12rem;
+	padding: .6rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: var(--color-background);
 	background: var(--color-accent);
 	text-decoration: none;
 	margin-left: 15vw;
 	border-radius: 7px;
 	transition: transform .1s ease-in-out;
+
 }
 .folioista a:hover {
 	transform: scale(1.05);
 }
 
-	
+.folioista .kuva {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 .folioista img {
 	width: clamp(250px, 25vw, 500px);
-	position: absolute;
+	
 	right: 0;
 	margin-right: 5.5vw;
 	display: flex;
 	align-self: center;
 	top: 0;
-	margin-top: 15.5vh;
+	
 	border-radius: 10px;
 	border: 3px solid var(--color-accent);
 	z-index: 0;
@@ -387,7 +398,7 @@ z-index: 5;
 
 
 #esimerkki {
-	margin-left: -1vw;
+	display: flex;
 	background: transparent;
 	color: var(--color-text-primary);
 	text-decoration: underline;
@@ -612,9 +623,9 @@ ul{
 
 
 
-	.folioista img {
+	.folioista .kuva img {
 		width: clamp(250px, 25vw, 500px);
-		margin-top: 20vh;
+		
 	}
 }
 .animate-on-scroll.in-view {
@@ -778,6 +789,7 @@ ul{
 
 	.kontti .folioista p {
 		margin-left: 0;
+		
 	}
 	.kontti .folioista a {
 		margin-left: 0;

@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+        
+}	
+html {
+    font-size: 62,5%;
+}
+section {
+    height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+:root {
+    --color-background: #f9f9f9;
+    /* Light grey for backgrounds */
+    --color-surface: #ffffff;
+    /* Pure white for cards or containers */
+    --color-text-primary: #000;
+    /* Dark grey for main text */
+    --color-text-secondary: #555555;
+    /* Medium grey for secondary text */
+    --color-accent: #003cff;
+    /* Muted blue for links and buttons */
+    --color-border: #e0e0e0;
+    /* Soft grey for dividers */
+    --color-hover: #3a78c2;
+    /* Slightly darker blue for hover states */
+    --color-background2: #F6F5EF;
+}
+.first {
+    background-image: url(Public/Images/Office\,\ computer\ with\ green\ screen_10.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding: 1px;
+}
+.header {
+    position: fixed;
+    /* Keeps the header fixed at the top */
+    top: 0;
+    /* Aligns it to the top of the viewport */
+    left: 0;
+    width: 100%;
+    /* Ensures the header spans the full width */
+    z-index: 1000;
+    background: var(--color-surface);
+    padding: .85rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: .5px .5px 5px var(--color-border);
+}
+.logo {
+    margin-left: 5vw;
+    font-size: 1rem;
+    max-width: 15rem;
+    display: flex;
+    align-items: center;
+}
+.logo  a{
+    font-weight: 500;
+    background: transparent;
+    background: linear-gradient(to right, #000000 22%, #003cff 5vw);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.logo img {
+    width: 12.5%;
+    margin-right: .25rem;
+    vertical-align: bottom;
+}
+.navbar {
+    margin-right: 3vw;
+    display: flex;
+    align-items: center;
+}
+.navbar a {
+    margin-right: 3rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+}
+
+
+.navbar a i {
+    margin-left: .25rem;
+}
+#nappi {
+    border: 1px solid var(--color-accent);
+    color: var(--color-background);
+    padding: .60rem 1.25rem;
+    border-radius: 7px;
+    background: var(--color-accent);
+    transition: transform .1s ease-in-out;
+}	
+#nappi:hover {
+    transform: scale(1.05);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex; 
+    align-items: center;
+}
+
+ .dropdown-menu {
+    display: flex;
+    position: absolute;
+    top: 100%; /* Näytetään suoraan linkin alapuolella */
+    left: 0;
+    background-color: var(--color-background);
+    border-radius: 10px;
+    border: 2px solid var(--color-accent);
+    z-index: 100;
+    width: 12.5vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    transform: translateY(-10px); /* Siirtää ylös 10 pikseliä */
+    opacity: 0; /* Piilotettu */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Siirtymä */
+    pointer-events: none;
+}
+
+
+.dropdown-menu a {
+    display: block;
+    color: var(--color-text-primary);
+    padding: 10px 3px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.10rem;
+    width: 80%;
+    margin-left: .5vw;
+    padding: .5rem;
+}
+
+.dropdown-menu a img {
+    width: 15.5%;
+    margin-right: 2px;
+    align-self: center;
+    vertical-align:	middle;
+}
+
+.dropdown-menu a #toka {
+    width: 10%;
+    margin-left: .35vw;
+    margin-right: 5px;
+    align-self: center;
+    vertical-align:	middle;
+}
+
+.dropdown-menu a #kolmas {
+    width: 9.5%;
+    margin-left: .35vw;
+    margin-right: 5px;
+    align-self: center;
+    vertical-align:	middle;
+}
+
+.dropdown-menu a:hover {
+    color: var(--color-accent);
+}
+
+
+/* Hover-toiminta vain dropdownille */
+.dropdown:hover .dropdown-menu {
+    display: flex; /* Näytä elementti */
+    transform: translateY(0px); /* Palaa alkuperäiseen paikkaansa */
+    opacity: 1; /* Tee näkyväksi */
+    pointer-events: all;
+}
+
+.dropdown-toggle i {
+    transition: transform 0.3s ease; /* Sulava siirtymä */
+}
+
+.dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.eka {
+    height: 57.5vh;
+    background: var(--color-background2);
+    display: flex;
+
+}
+
+.teksti {
+    width: 100%;
+    margin-right: clamp(2vw, 22.5vw, 22.5vw);
+    margin-left: clamp(2vw, 22.5vw, 22.5vw);
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
+.teksti .boxi {
+    display: flex;
+    align-self: first baseline;
+    margin-left: 2vw;
+    margin-top: 10vh;
+    font-size: .75rem;
+    border: 1px solid var(--color-accent);
+    padding: .40rem .60rem;
+    border-radius: 7px;
+    color: var(--color-accent);
+    transform: rotate(-3deg);
+    top: 2rem;
+    margin-bottom: 1vh;
+    
+}
+
+.teksti .lause {
+        height: 40vh	;
+}
+
+.teksti .lause h2 {
+    max-width: 35rem;
+    font-size: clamp(2.5rem, 1rem + 2.5vw, 3.15rem);
+
+    margin-left: 2vw;
+    margin-bottom: 3vh;
+
+}
+
+
+.lause h2 span {
+    color: var(--color-accent);
+}
+
+.lause p {
+    font-size: 1.05rem;
+    margin-left: 2vw;
+    max-width: 22.5vw;
+    margin-bottom: 2vh;
+}
+
+#nappi1 {
+    border: 1px solid var(--color-accent);
+    color: var(--color-background);
+    padding: .70rem 1.35rem;
+    border-radius: 7px;
+    background: var(--color-accent);
+    transition: transform .1s ease-in-out;
+    text-decoration: none;
+    margin-left: 2vw;
+}
+#nappi1:hover {
+    transform: scale(1.05);
+}	
+
+#nappi1 i {
+    font-size: 1.25rem;
+    vertical-align: text-bottom;
+}
+
+
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: #1C1B18;
+    padding: 70px 0;
+}
+.footer-col{
+width: 25%;
+padding: 0 15px;
+}
+
+.footer-col1{
+    width: 60%	;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logo1 {
+    flex-wrap: wrap;
+    font-size: 1.35rem;
+    max-width: 25rem;
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+}
+.logo1 h2 {
+    font-weight: 500;
+    color: var(--color-background);
+}
+
+.logo1 p {
+    color: var(--color-background);
+    font-size: .75rem;
+    
+}
+.logo1 img {
+    width: 10.5%;
+    margin-right: .25rem;
+}	
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: var(--color-accent);
+    height: 2px;
+    box-sizing: border-box;
+    width: 70px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: var(--color-background);		
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col1 .social-links {
+    display: flex;
+    justify-content: flex-end; /* Aligns the icons to the right */
+    margin-left: auto; /* Pushes the social links to the right */
+    transition: .2s;
+    gap: 1rem;
+}
+
+.footer-col1 .social-links a {
+    color: var(--color-background);
+    font-size: 1.5rem;
+    transition: .2s;
+}
+
+.footer-col1 .social-links a:hover{
+    color: var(--color-accent);
+    
+}
+
+
+
+
+
+
+/* Hamburger */
+.menu-icon {
+    display: none;
+}
+#menu-toggle {
+    display: none;
+}
+#menu-toggle:checked ~ .navbar {
+    transform: scale(1, 1);
+}
+
+
+
+@media (max-width: 1280px) {
+    html {
+        font-size: 77.5%;
+    }
+
+    .teksti {
+        
+        margin-right: clamp(5vw, 22.5vw, 5vw);
+        margin-left: clamp(5vw, 22.5vw, 5vw);
+    }
+}
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+    @media (max-width: 1028px) {
+        .menu-icon {
+            display: block;
+            margin-right: 5vw;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .navbar {
+            flex-direction: column;
+            background-color: var(--color-surface);
+            align-items: start;
+            position: absolute;
+            height: auto;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .7s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+    
+    
+    
+    
+        #menu-toggle:checked ~ .navbar {
+            max-height: 100vh;
+            
+          
+        }
+        .navbar a {
+            margin-left: 5vw;
+            margin-bottom: 2rem;
+            margin-top: 2vh;
+            font-size: 1.1rem;
+            color: var(--color-text-primary);
+            transition: color 1s ease-in-out;
+        }
+        .navbar a:hover {
+            color: var(--color-accent);
+            transition: color .2s ease-in-out;
+        }
+    
+        .dropdown-menu {
+            border: none;
+            left: 0;
+            background: var(--color-background);
+            z-index: 100;
+            width: 80vw;
+            flex-direction: column;
+            display: none;
+            justify-content: flex-start;
+            padding:0%;
+            position: static;
+    
+        }
+        
+        
+        .dropdown-menu a {
+            align-items: start;
+            color: var(--color-text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.10rem;
+            width: 50%;
+            margin-top: -2vh;
+            margin-left: 5vw;
+            padding: 0;
+            align-self: flex-start;
+        }
+    
+    
+        
+        .dropdown-menu a img {
+            width: 12.5%;
+            margin-right: 2px;
+            align-self: center;
+            vertical-align:	middle;
+        }
+        
+        .dropdown-menu a #toka {
+            width: 10%;
+            margin-left: .35vw;
+            margin-right: 5px;
+            align-self: center;
+            vertical-align:	middle;
+        }
+        
+        .dropdown-menu a #kolmas {
+            width: 9.5%;
+            margin-left: .35vw;
+            margin-right: 5px;
+            align-self: center;
+            vertical-align:	middle;
+        }
+    
+        .dropdown:hover .dropdown-menu {
+            display: flex; /* Näytä elementti */
+            transform: translateY(0px); /* Palaa alkuperäiseen paikkaansa */
+            opacity: 1; /* Tee näkyväksi */
+            pointer-events: all;
+        }
+
+        
+
+    html {
+        font-size: 75%;
+    }
+
+    .lause p {
+        max-width: 100%;
+    }
+
+}
+
+
+
+@media(max-width: 767px){
+    .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+    .footer-col{
+    width: 100%;
+}
+}
